@@ -1,4 +1,5 @@
 # Egyenlet ábrázoló
+TODO: több kép és a forráskód feltöltése
 ![image](https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_vis_1.png)
 
 # 3D-s játék
