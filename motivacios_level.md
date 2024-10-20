@@ -1,3 +1,8 @@
+<div align="center">
+    <h1>ELTE TTK Talentum Program</h1>
+    <h2>Motivációs levél</h2>
+</div>
+
 # Bevezetés
 Mindig is jó voltam matekból. Könnyen megértettem már az órán az anyagot, és mindig 5-ös voltam komolyabb otthoni tanulás nélkül.
 
