@@ -1,20 +1,20 @@
 <div align="center">
-    <h1>ELTE TTK Talentum Program</h1>
-    <h2>Motivációs levél</h2>
+    <h1>Motivációs levél</h1>
+    (ELTE TTK Talentum Program)
 </div>
 
 # Bevezetés
-Mindig is jó voltam matekból. Könnyen megértettem már az órán az anyagot, és mindig 5-ös voltam komolyabb otthoni tanulás nélkül.
+Mindig is jó voltam matekból. Könnyen megértettem már órán az anyagot, és mindig 5-ös voltam komolyabb otthoni tanulás nélkül.
 
-# Amivel eddig foglalkoztam
 2021 végén (7. osztály) elkezdtem magamtól programozást tanulni és a matek iránti érdeklődésem is nagyban megnőtt.
 
+Sok programozási problémához matek szükséges, és sok matek problémában segít a programozás, így kéz a kézben tanultam őket.
+
+# Amivel eddig foglalkoztam
 Pár program, amik megírása közben sok matekot tanultam/használtam (vagy bármilyen más módon kapcsolódik a programhoz):
 
 ## Játékok
-Így szinte szórakozva tudtam matekot és programozást tanulni, kivéve amikor 4-5 óra debuggolás után se tudtam, hogy hol a hiba...
-
-Játékmotor nélkül csináltam, így gyakorlatilag az egészet én írtam, csak multimédia könyvtárakat használva.
+(játékmotor nélkül, így gyakorlatilag az egészet én írtam, csak multimédia könyvtárakat használva)
 
 ### Egy 2D-s játék
 Trigonometria alapjait (sin, cos, arctan) megtanultam (egy olyan ellenség megírásával, ami a játékos felé lő).
@@ -41,9 +41,16 @@ Sok trigonometriát tanultam (már volt egy alapom) (a shadereket még nem én �
 [Forráskód](https://github.com/Krist0FF-T/stuff/tree/main/minecraft_clone)
 
 ## Eszközök
-Gyakorló lap generáló: egy képet generált egy grafikus könytárral, amit ki lehetett nyomtatni
+### Gyakorló lap generáló
+Egy képet generált egy grafikus könytárral, amit ki lehetett nyomtatni.
 
-### Egyenlet ábrázoló:
+<details>
+    <summary>Képek</summary>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/feladatlap_1.png"/>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/feladatlap_2.png"/>
+</details>
+
+### Egyenlet ábrázoló
 (pl "x^2 + y^2 = 1", "y = sin(x)", vagy akár "x^2 + (1.3y + 0.3 - sqrt(abs(x))) ^ 2 = 0")
 
 Működése:
@@ -56,17 +63,24 @@ Működése:
 
 <details>
     <summary>Képek</summary>
+    piros: y = sin(x)
+    kék: y = cos(x)
+    négyzetrács: abs(sin(x * pi)) = 0, vagy abs(sin(y * pi)) = 0
     <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_vis_1.png"/>
-    (majd még rakok fel többet)
+    TODO: több kép
 </details>
 
 ## Egyéb
-Project Euler problémák megoldása (matek x programozás problémák): mindenkinek ajánlom, minden nehézségben található probléma
+### Project Euler problémák megoldása
+(matek x programozás problémák)
 
-Mandelbrot halmaz ábrázoló:
+Mindenkinek ajánlom, minden nehézségben található probléma
+
+### Mandelbrot halmaz ábrázoló
 - ebből jött az ötlet az egyenlet ábrázoló működésére, mert nem csak azt jelöli, hogy része-e a halmaznak, hanem azt is, hogy ha nem, akkor mennyire van messze, hogy a része legyen
 - sokat tanultam a komplex számokról
 
+TODO: képek
 
 # Amivel a jövőben foglalkoznék
 - gépi tanuláson belül főleg a mélytanulással (Python + PyTorch):
