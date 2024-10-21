@@ -1,6 +1,5 @@
 <div align="center">
     <h1>Motivációs levél</h1>
-    (ELTE TTK Talentum Program)
 </div>
 
 # Bevezetés
@@ -80,7 +79,14 @@ Mindenkinek ajánlom, minden nehézségben található probléma
 - ebből jött az ötlet az egyenlet ábrázoló működésére, mert nem csak azt jelöli, hogy része-e a halmaznak, hanem azt is, hogy ha nem, akkor mennyire van messze, hogy a része legyen
 - sokat tanultam a komplex számokról
 
-TODO: képek
+<details>
+    <summary>Képek</summary>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_1.png"/>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_2.png"/>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_3.png"/>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_4.png"/>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_5.png"/>
+</details>
 
 # Amivel a jövőben foglalkoznék
 - gépi tanuláson belül főleg a mélytanulással (Python + PyTorch):
