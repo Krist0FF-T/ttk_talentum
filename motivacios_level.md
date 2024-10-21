@@ -19,8 +19,26 @@ Játékmotor nélkül csináltam, így gyakorlatilag az egészet én írtam, csa
 ### Egy 2D-s játék
 Trigonometria alapjait (sin, cos, arctan) megtanultam (egy olyan ellenség megírásával, ami a játékos felé lő).
 
+<details>
+    <summary>Képek</summary>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/2d_1.png"/>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/2d_2.png"/>
+</details>
+
+Forráskód, több kép és videók a saját [repo](https://github.com/Krist0FF-T/supermuki)-jában
+
 ### Egy 3D-s játék (MineCraft-szerű építő játék)
 Sok trigonometriát tanultam (már volt egy alapom) (a shadereket még nem én írtam meg)
+
+<details>
+    <summary>Képek</summary>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/3d.png"/>
+    <img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot002.png"/>
+    <img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot003.png"/>
+    <img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot005.png"/>
+</details>
+
+[Forráskód](https://github.com/Krist0FF-T/stuff/tree/main/minecraft_clone)
 
 ## Eszközök
 Gyakorló lap generáló: egy képet generált egy grafikus könytárral, amit ki lehetett nyomtatni
@@ -35,6 +53,12 @@ Működése:
     - így ha d=0, akkor 1 (100%), és ahogy d nő, egyre sötétül
     - (általában ezt használtam, vagy ehhez hasonlót)
     - (több egyenlet ábrázolásánál kicsit bonyolultabb)
+
+<details>
+    <summary>Képek</summary>
+    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_vis_1.png"/>
+    (majd még rakok fel többet)
+</details>
 
 ## Egyéb
 Project Euler problémák megoldása (matek x programozás problémák): mindenkinek ajánlom, minden nehézségben található probléma
