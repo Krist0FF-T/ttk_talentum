@@ -62,7 +62,6 @@ Működése:
 
 <details>
     <summary>Képek</summary>
-
     piros: y = sin(x); kék: y = cos(x); négyzetrács: abs(sin(x * pi)) = 0 vagy abs(sin(y * pi)) = 0
     <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_vis_1.png"/>
     TODO: több kép
