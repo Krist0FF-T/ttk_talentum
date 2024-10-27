@@ -16,7 +16,7 @@ Pár program, amik megírása közben sok matekot tanultam/használtam (vagy bá
 (játékmotor nélkül, így gyakorlatilag az egészet én írtam, csak multimédia könyvtárakat használva)
 
 ### Egy 2D-s játék
-Trigonometria alapjait (sin, cos, arctan) megtanultam (egy olyan ellenség megírásával, ami a játékos felé lő).
+Trigonometria alapjait (sin, cos, arctan) megtanultam (egy olyan ellenség megírásához, ami a játékos felé lő).
 
 <details>
     <summary>Képek</summary>
@@ -62,9 +62,8 @@ Működése:
 
 <details>
     <summary>Képek</summary>
-    piros: y = sin(x)
-    kék: y = cos(x)
-    négyzetrács: abs(sin(x * pi)) = 0, vagy abs(sin(y * pi)) = 0
+
+    piros: y = sin(x); kék: y = cos(x); négyzetrács: abs(sin(x * pi)) = 0 vagy abs(sin(y * pi)) = 0
     <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_vis_1.png"/>
     TODO: több kép
 </details>
@@ -92,9 +91,9 @@ Mindenkinek ajánlom, minden nehézségben található probléma
 - gépi tanuláson belül főleg a mélytanulással (Python + PyTorch):
     - (alap projektekkel már elkezdtem)
     - komolyabb projektekhez nincs még meg a kellő hardverem, se a pénz rá
-        - (kellene egy erős GPU és sok tárhely a datasetek tárolására)
+        - (kellene egy erős videókártya sok VRAM-mal és sok tárhely a datasetek tárolására)
     - cél: LLM-ek (pl. GPT, Llama), kép generálók (pl. DALL-E, Stable Diffusion), stb. működésének mélyebb megértése (kisebb verziók készítésével)
-- még több 3D-s grafika (majd Rust + wGPU használatával) (előzőleg C++ + raylib):
+- még több 3D-s grafika (majd Rust + wgpu használatával) (előzőleg C++ + raylib):
     - cél: a mögötte levő matek mélyebb megértése
     - (ezúttal a shadereket is én írom majd meg)
 - kriptográfia, szteganográfia:
