@@ -53,7 +53,7 @@ Egy képet generált egy grafikus könytárral, amit ki lehetett nyomtatni.
 (pl "x^2 + y^2 = 1", "y = sin(x)", vagy akár "x^2 + (1.3y + 0.3 - sqrt(abs(x))) ^ 2 = 0")
 
 Működése:
-- minden pixelnél kiszámolja az egyenlet két oldalátnak értékét x és y behelyettesítésével és e 2 érték különbsége alapján színezi be
+- minden pixelnél kiszámolja az egyenlet két oldalának értékét x és y behelyettesítésével és e 2 érték különbsége alapján színezi be
 - világosság = 1 / (1 + 10d) ^ 2
     - (ahol "d" a két oldal különbségének az abszolútértéke)
     - így ha d=0, akkor 1 (100%), és ahogy d nő, egyre sötétül
