@@ -18,30 +18,22 @@ Pár program, amik megírása közben sok matekot tanultam/használtam (vagy bá
 ### Egy 2D-s játék
 Trigonometria alapjait (sin, cos, arctan) megtanultam (egy olyan ellenség megírásához, ami a játékos felé lő).
 
-<details>
-    <summary>Képek</summary>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/2d_1.png"/>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/2d_2.png"/>
-</details>
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/2d_1.png"/>
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/2d_2.png"/>
 
 Forráskód, több kép és videók a saját [repo](https://github.com/Krist0FF-T/supermuki)-jában
 
 ### Egy 3D-s játék (MineCraft-szerű építő játék)
 Sok trigonometriát tanultam (már volt egy alapom) (a shadereket még nem én írtam meg)
 
-<details>
-    <summary>Képek</summary>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/3d.png"/>
-    <img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot002.png"/>
-    <img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot003.png"/>
-    <img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot005.png"/>
-</details>
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/3d.png"/>
+<img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot002.png"/>
 
 [Forráskód](https://github.com/Krist0FF-T/stuff/tree/main/minecraft_clone)
 
 ## Eszközök
-### Gyakorló lap generáló
-Egy képet generált egy grafikus könytárral, amit ki lehetett nyomtatni.
+### Feladatlap generáló
+Egy képet generált egy grafikus könyvtárral, amit ki lehetett nyomtatni. (Az akkor 2.-os kistesómnak készítettem vele feladatlapokat)
 
 <details>
     <summary>Képek</summary>
@@ -49,23 +41,45 @@ Egy képet generált egy grafikus könytárral, amit ki lehetett nyomtatni.
     <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/feladatlap_2.png"/>
 </details>
 
-### Egyenlet ábrázoló
-(pl "x^2 + y^2 = 1", "y = sin(x)", vagy akár "x^2 + (1.3y + 0.3 - sqrt(abs(x))) ^ 2 = 0")
-
+### Egyenletábrázoló
 Működése:
 - minden pixelnél kiszámolja az egyenlet két oldalának értékét x és y behelyettesítésével és e 2 érték különbsége alapján színezi be
-- világosság = 1 / (1 + 10d) ^ 2
+- világosság (0..1) = 1 / (1 + 10d) ^ 2
     - (ahol "d" a két oldal különbségének az abszolútértéke)
     - így ha d=0, akkor 1 (100%), és ahogy d nő, egyre sötétül
     - (általában ezt használtam, vagy ehhez hasonlót)
     - (több egyenlet ábrázolásánál kicsit bonyolultabb)
 
-<details>
-    <summary>Képek</summary>
-    piros: y = sin(x); kék: y = cos(x); négyzetrács: abs(sin(x * pi)) = 0 vagy abs(sin(y * pi)) = 0
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_vis_1.png"/>
-    TODO: több kép
-</details>
+Egy egyszerű példa:
+- piros: y = sin(x)
+- kék: y = cos(x)
+- négyzetrács:
+    - sin(x * pi) = 0 (függőleges)
+    - sin(y * pi) = 0 (vízszintes)
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_sin_cos.png"/>
+
+Egy kicsit összetettebb példa: egy arc (részlet):
+- piros (szem körvonal):
+    - |y - ysz| = -cos(x)
+    - ha |x| < 6 (hogy a fejen kívül ne ismétlődjön)
+- kék (pupilla):
+    - dsz^2 = dsz * sqrt(2)/2
+- zöld (fej és haj körvonal):
+    - do = rf
+    - do = rh
+- sárga (haj besatírozása):
+    - sin((x - y) * 4) = 0
+    - ha rh < do < rf
+- (+ egy halvány négyzetrács a feljebb említett módszerrel)
+ahol:
+- ysz = 0.6 (szemek magassága)
+- dsz = sqrt((|x| - pi)^2 + (y - ysz)^2) (távolság a jobb/bal szem középpontjától)
+- do = sqrt(x^2 + y^2) (távolság az origótól)
+- rf = 6 (fej sugara)
+- rh = rf - max(0, (|sin(pi/2 * x + 0.3)| + rf/2) * sin(alfa))
+    - ahol alfa = arctan(y/x)
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_face.png"/>
+
 
 ## Egyéb
 ### Project Euler problémák megoldása
@@ -74,17 +88,16 @@ Működése:
 Mindenkinek ajánlom, minden nehézségben található probléma
 
 ### Mandelbrot halmaz ábrázoló
-- ebből jött az ötlet az egyenlet ábrázoló működésére, mert nem csak azt jelöli, hogy része-e a halmaznak, hanem azt is, hogy ha nem, akkor mennyire van messze, hogy a része legyen
+- ebből jött az ötlet az egyenletábrázoló működésére, mert nem csak azt jelöli, hogy része-e a halmaznak, hanem azt is, hogy ha nem, akkor mennyire van messze, hogy a része legyen
 - sokat tanultam a komplex számokról
 
-<details>
-    <summary>Képek</summary>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_1.png"/>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_2.png"/>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_3.png"/>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_4.png"/>
-    <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_5.png"/>
-</details>
+Ha csak fekete és fehér lenne:
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_1.png"/>
+Ha világosság (0..1) = 1 - n/N:
+(ahol "N" a kiszámolt iterációk száma és "n" az iteráció száma amelytől |z| > 2)
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_2.png"/>
+Ráközelítve:
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_3.png"/>
 
 # Amivel a jövőben foglalkoznék
 - gépi tanuláson belül főleg a mélytanulással (Python + PyTorch):
@@ -100,10 +113,7 @@ Mindenkinek ajánlom, minden nehézségben található probléma
     - (egyik barátommal mindig új módszerekkel titkosítottan kommunikálunk és ezeket össze lehetne gyűjteni)
 
 # Befejezés
-Fizikából is az elsők között vagyok, mert nagyrészben matek, de komolyabban nem tanultam előre.
-(Biológiából és kémiából is jó vagyok)
-
-Mindennap találok valami érdekes problémát, ami leköt (például apukámmal minden beszélgetés során).
+Mindennap találok valami érdekes problémát, ami leköt. Mindig van mit számolnom, min elmélkednem.
 
 Még nem tudom, hogy pontosan mi szeretnék lenni (szoftverfejlesztő, matematikus, villamosmérnök, vagy valami más), de ez a program egy nagyszerű lehetőség, hogy legalább egyről (matematikus) dönteni tudjak.
 
