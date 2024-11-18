@@ -52,6 +52,7 @@ Egy képet generált egy grafikus könyvtárral, amit ki lehetett nyomtatni. (Az
 
 ### Egy egyszerű példa
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_sin_cos.png"/>
+
 - piros: y = sin(x)
 - kék: y = cos(x)
 - négyzetrács:
@@ -93,14 +94,14 @@ Mindenkinek ajánlom, minden nehézségben található probléma
 - ebből jött az ötlet az egyenletábrázoló működésére, mert nem csak azt jelöli, hogy része-e a halmaznak, hanem azt is, hogy ha nem, akkor mennyire van messze, hogy a része legyen
 - sokat tanultam a komplex számokról
 
-Ha csak fekete és fehér lenne:
+### Ha csak fekete és fehér lenne
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_1.png"/>
 
-Ha világosság (0..1) = 1 - n/N:
+### Ha világosság (0..1) = 1 - n/N
 (ahol "N" a kiszámolt iterációk száma és "n" az iteráció száma amelytől |z| > 2)
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_2.png"/>
 
-Ráközelítve:
+### Ráközelítve
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_3.png"/>
 
 # Amivel a jövőben foglalkoznék
