@@ -12,10 +12,10 @@ Sok programozási problémához matek szükséges, és sok matek problémában s
 # Amivel eddig foglalkoztam
 Pár program, amik megírása közben sok matekot tanultam/használtam (vagy bármilyen más módon kapcsolódik a programhoz):
 
-## Játékok
-(játékmotor nélkül, így gyakorlatilag az egészet én írtam, csak multimédia könyvtárakat használva)
+## Egy 2D-s játék (2022. feb.) (Python, PyGame)
+- Játékmotor nélkül
+- Programozás és matek tanulási célból
 
-### Egy 2D-s játék
 Trigonometria alapjait (sin, cos, arctan) megtanultam (egy olyan ellenség megírásához, ami a játékos felé lő).
 
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/2d_1.png"/>
@@ -23,16 +23,16 @@ Trigonometria alapjait (sin, cos, arctan) megtanultam (egy olyan ellenség megí
 
 Forráskód, több kép és videók a saját [repo](https://github.com/Krist0FF-T/supermuki)-jában
 
-### Egy 3D-s játék (MineCraft-szerű építő játék)
-Sok trigonometriát tanultam (már volt egy alapom) (a shadereket még nem én írtam meg)
+## Egy 3D-s játék (2022. aug.) (C++, raylib)
+- Játékmotor nélkül
+- Sok trigonometriát tanultam (már volt egy alapom) (a shadereket még nem én írtam meg)
 
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/3d.png"/>
 <img src="https://github.com/Krist0FF-T/stuff/blob/main/minecraft_clone/0_0_6/screenshots/screenshot002.png"/>
 
 [Forráskód](https://github.com/Krist0FF-T/stuff/tree/main/minecraft_clone)
 
-## Eszközök
-### Feladatlap generáló
+## Feladatlap generáló (2023 jan.) (Python)
 Egy képet generált egy grafikus könyvtárral, amit ki lehetett nyomtatni. (Az akkor 2.-os kistesómnak készítettem vele feladatlapokat)
 
 <details>
@@ -41,8 +41,8 @@ Egy képet generált egy grafikus könyvtárral, amit ki lehetett nyomtatni. (Az
     <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/feladatlap_2.png"/>
 </details>
 
-### Egyenletábrázoló
-Működése:
+## Egyenletábrázoló (első implementáció: 2022 nov.)
+### Működése
 - minden pixelnél kiszámolja az egyenlet két oldalának értékét x és y behelyettesítésével és e 2 érték különbsége alapján színezi be
 - világosság (0..1) = 1 / (1 + 10d) ^ 2
     - (ahol "d" a két oldal különbségének az abszolútértéke)
@@ -50,52 +50,56 @@ Működése:
     - (általában ezt használtam, vagy ehhez hasonlót)
     - (több egyenlet ábrázolásánál kicsit bonyolultabb)
 
-Egy egyszerű példa:
+### Egy egyszerű példa
+<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_sin_cos.png"/>
 - piros: y = sin(x)
 - kék: y = cos(x)
 - négyzetrács:
     - sin(x * pi) = 0 (függőleges)
     - sin(y * pi) = 0 (vízszintes)
-<img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_sin_cos.png"/>
 
-Egy kicsit összetettebb példa: egy arc (részlet):
-- piros (szem körvonal):
-    - |y - ysz| = -cos(x)
-    - ha |x| < 6 (hogy a fejen kívül ne ismétlődjön)
-- kék (pupilla):
-    - dsz^2 = dsz * sqrt(2)/2
-- zöld (fej és haj körvonal):
-    - do = rf
-    - do = rh
-- sárga (haj besatírozása):
-    - sin((x - y) * 4) = 0
-    - ha rh < do < rf
-- (+ egy halvány négyzetrács a feljebb említett módszerrel)
-ahol:
-- ysz = 0.6 (szemek magassága)
-- dsz = sqrt((|x| - pi)^2 + (y - ysz)^2) (távolság a jobb/bal szem középpontjától)
-- do = sqrt(x^2 + y^2) (távolság az origótól)
-- rf = 6 (fej sugara)
-- rh = rf - max(0, (|sin(pi/2 * x + 0.3)| + rf/2) * sin(alfa))
-    - ahol alfa = arctan(y/x)
+### Egy kicsit összetettebb példa: egy arc (részlet)
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/eq_face.png"/>
 
+- ábrázolt egyenletek:
+    - piros (szem körvonal):
+        - |y - ysz| = -cos(x)
+        - ha |x| < 6 (hogy a fejen kívül ne ismétlődjön)
+    - kék (pupilla):
+        - dsz^2 = dsz * sqrt(2)/2
+    - zöld (fej és haj körvonal):
+        - do = rf
+        - do = rh
+    - sárga (haj besatírozása):
+        - sin((x - y) * 4) = 0
+        - ha rh < do < rf
+    - (+ egy halvány négyzetrács a feljebb említett módszerrel)
 
-## Egyéb
-### Project Euler problémák megoldása
+- ahol:
+    - ysz = 0.6 (szemek magassága)
+    - dsz = sqrt((|x| - pi)^2 + (y - ysz)^2) (távolság a jobb/bal szem középpontjától)
+    - do = sqrt(x^2 + y^2) (távolság az origótól)
+    - rf = 6 (fej sugara)
+    - rh = rf - max(0, (|sin(pi/2 * x + 0.3)| + rf/2) * sin(alfa))
+        - ahol alfa = arctan(y/x)
+
+
+## Project Euler problémák megoldása
 (matek x programozás problémák)
 
 Mindenkinek ajánlom, minden nehézségben található probléma
 
-### Mandelbrot halmaz ábrázoló
+## Mandelbrot halmaz ábrázoló
 - ebből jött az ötlet az egyenletábrázoló működésére, mert nem csak azt jelöli, hogy része-e a halmaznak, hanem azt is, hogy ha nem, akkor mennyire van messze, hogy a része legyen
 - sokat tanultam a komplex számokról
 
 Ha csak fekete és fehér lenne:
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_1.png"/>
+
 Ha világosság (0..1) = 1 - n/N:
 (ahol "N" a kiszámolt iterációk száma és "n" az iteráció száma amelytől |z| > 2)
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_2.png"/>
+
 Ráközelítve:
 <img src="https://github.com/Krist0FF-T/ttk_talentum/blob/main/images/mandelbrot_3.png"/>
 
